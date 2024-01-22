@@ -46,7 +46,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  margin: 0.25em;
+  margin: 0.5em 0;
 }
 button:hover {
   border-color: #646cff;
@@ -55,14 +55,6 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-button:active {
-  border-color: #535bf2;
-}
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 
 input {
   border-radius: 8px;
@@ -74,7 +66,7 @@ input {
   background-color: #1a1a1a;
   color: inherit;
   transition: border-color 0.25s;
-  margin: 0.25em;
+  margin: 0.5em;
 }
 @media (prefers-color-scheme: light) {
   :root {
@@ -83,8 +75,25 @@ input {
   }
   a:hover {
     color: #747bff;
-  }
-  button {
+    button {
     background-color: #f9f9f9;
   }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.th {
+  font-weight: 700;
+  padding: 2em;
+}
+
+tbody {
+  padding: 1em 2em;
+  border-bottom: 1px solid #e0e0e0;
+}
 }
