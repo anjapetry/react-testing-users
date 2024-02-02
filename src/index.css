@@ -67,6 +67,7 @@ input {
   color: inherit;
   transition: border-color 0.25s;
   margin: 0.5em;
+  margin-left: auto;
 }
 @media (prefers-color-scheme: light) {
   :root {
