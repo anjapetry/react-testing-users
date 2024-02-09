@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Andalé Mono, mono-space;
   line-height: 1.5;
   font-weight: 500;
   font-size: 1.25rem;
@@ -46,7 +46,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  margin: 0.5em 0;
+  margin: 0 1em 1em;
 }
 button:hover {
   border-color: #646cff;
@@ -56,8 +56,33 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+label + input {
+  display: block;
+  margin-left: 1em;
+}
+label {
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+.label-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.25em 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
 input {
-  border-radius: 8px;
+  display: block;
+  border-radius: 10px;
   border: 1px solid #747bff;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -66,8 +91,7 @@ input {
   background-color: #1a1a1a;
   color: inherit;
   transition: border-color 0.25s;
-  margin: 0.5em;
-  margin-left: auto;
+  margin: 0.8em;
 }
 @media (prefers-color-scheme: light) {
   :root {
@@ -81,20 +105,22 @@ input {
   }
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  margin: 1em 0;
+@media (screen-spanning: single-fold-vertical) {
+  body {
+    flex-direction: row;
+  }
+  h1 {
+    font-size: 4.8em;
+  }
+  input {
+    margin: 1em;
+  }
+  button {
+    margin: 1em;
+  }
+  label {
+    margin: 1em;
+  }
 }
 
-.th {
-  font-weight: 700;
-  padding: 2em;
-}
-
-tbody {
-  padding: 1em 2em;
-  border-bottom: 1px solid #e0e0e0;
-}
 }
