@@ -17,12 +17,12 @@ const UserForm = ( { onUserAdded }) => {
   <form onSubmit={handleSubmit}>
     <div className="form">
       <div className="label-wrapper">
-        <label>Name</label>
-        <input value={name} onChange={(e) => setName(e.target.value)} type="text" />
+        <label htmlFor="name">Name</label>
+        <input id='name' value={name} onChange={(e) => setName(e.target.value)} type="text" />
         </div>
         <div className="label-wrapper">
-            <label>Email</label>
-            <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" />
+            <label htmlFor='email'>Email</label>
+            <input id='email' value={email} onChange={(e) => setEmail(e.target.value)} type="text" />
         </div>
         </div>
         <button>Add User</button>
