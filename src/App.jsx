@@ -9,7 +9,6 @@ function App() {
     setUsers([...users, user]);
   }
 
-
   return (
     <main>
     <UserForm  onUserAdded={onUserAdded} />
