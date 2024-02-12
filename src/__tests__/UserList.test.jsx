@@ -14,12 +14,12 @@ test('render one row per user', () => {
 // screen.logTestingPlaygroundURL(); to create query functions
 // const rows = screen.getAllByRole('row');
 // workaround to use within to get rows from tbody
-// const rows = within(screen.getByTestId('users')).getAllByRole('row');
-// const table = within(container).getByRole('table');
+   const rows = within(screen.getByTestId('users')).getAllByRole('row');
+//const table = within(container).getByRole('table');
 // const table = container.querySelector('table');
 // console.log(table);
 // eslint-disable-next-line
-const rows = container.querySelectorAll('tbody tr');
+// const rows = container.querySelectorAll('tbody tr'); fallback #2
 
 
 // Assert: ensure correct number of rows in the table
