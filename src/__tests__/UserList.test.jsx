@@ -2,6 +2,7 @@ import { render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import UserList from '../UserList';
 
+// most of the time, you will want to render the component in a helper function
 function renderComponent() {
     const users = [
   { name: 'Jane', email: 'jane@jane.com' },
@@ -11,6 +12,12 @@ function renderComponent() {
 
   return { users };
 }
+
+// to be avoided  according to react testing library documentation:
+// beforeEach(() => {
+  // render(<UserList users={users} />);
+// });
+
 
 test('render one row per user', () => {
     // Arrange: render the component

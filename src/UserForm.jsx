@@ -11,6 +11,9 @@ const UserForm = ( { onUserAdded }) => {
       email,
       name,
     });
+
+    setEmail('');
+    setName('');
   }
 
   return (
